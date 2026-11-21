@@ -1,1 +1,12 @@
-Déposez ici les photos des membres (ex. jean-kabila.jpg), puis indiquez le chemin dans assets/gouvernance.js.
+PHOTOS DES MEMBRES - deposez les photos ici avec EXACTEMENT ces noms (format .jpg, photo carree ou portrait) :
+
+Conseil d'administration
+  erick-mukala-mayoyo.jpg
+  eugenie-misenga-kangoji.jpg
+  ernest-kamayi-mulumba.jpg
+  monique-mushiya-tshilumba.jpg
+  joseph-debaif-mutombo-kayembe.jpg
+  william-kanku-nkumbi.jpg
+  moise-nelson-muzembe-muamba.jpg
+
+Tant qu'une photo est absente, les initiales du membre s'affichent a la place.

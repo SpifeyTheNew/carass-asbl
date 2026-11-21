@@ -139,10 +139,10 @@
       </div>
       <figure class="orgchart reveal" aria-label="Organigramme de gouvernance du CARASS">
         <div class="orgchart__chain">
-          <button type="button" class="orgchart__box orgchart__box--1 orgchart__box--btn" data-organ="assemblee" aria-haspopup="dialog"><strong>Assemblée générale</strong><span>Organe souverain · membres effectifs</span><em>Voir les membres →</em></button>
-          <button type="button" class="orgchart__box orgchart__box--2 orgchart__box--btn" data-organ="conseil" aria-haspopup="dialog"><strong>Conseil d'administration</strong><span>5 à 8 administrateurs</span><em>Voir les membres →</em></button>
-          <button type="button" class="orgchart__box orgchart__box--3 orgchart__box--btn" data-organ="controle" aria-haspopup="dialog"><strong>Comité de contrôle</strong><span>2 à 3 commissaires aux comptes</span><em>Voir les membres →</em></button>
-          <button type="button" class="orgchart__box orgchart__box--4 orgchart__box--btn" data-organ="direction" aria-haspopup="dialog"><strong>Direction exécutive</strong><span>Gestion quotidienne et opérationnelle</span><em>Voir les membres →</em></button>
+          <div class="orgchart__box orgchart__box--1"><strong>Assemblée générale</strong><span>Organe souverain · membres effectifs</span></div>
+          <div class="orgchart__box orgchart__box--2"><strong>Conseil d'administration</strong><span>5 à 8 administrateurs</span></div>
+          <div class="orgchart__box orgchart__box--3"><strong>Comité de contrôle</strong><span>2 à 3 commissaires aux comptes</span></div>
+          <div class="orgchart__box orgchart__box--4"><strong>Direction exécutive</strong><span>Gestion quotidienne et opérationnelle</span></div>
         </div>
         <div class="orgchart__stem" aria-hidden="true"></div>
         <ol class="orgchart__depts">
@@ -157,24 +157,133 @@
         </ol>
         <figcaption>Les 8 départements</figcaption>
       </figure>
-      <p class="orgchart__hint">Cliquez sur un organe pour découvrir ses membres.</p>
-      <dialog class="modal" id="organ-dialog" aria-labelledby="organ-title">
-        <div class="modal__head">
-          <div>
-            <span class="modal__kicker">Gouvernance</span>
-            <h2 id="organ-title"></h2>
-            <p id="organ-intro"></p>
-            <ul class="modal__facts" id="organ-facts"></ul>
-          </div>
-          <button type="button" class="modal__close" data-close aria-label="Fermer">×</button>
+      <div class="team-block">
+        <div class="team-block__head reveal">
+          <h3>Conseil d'administration</h3>
+          <p>Membres élus par l'Assemblée générale constitutive du 05/09/2026 pour un mandat de cinq ans renouvelable (Acte constitutif).</p>
         </div>
-        <div class="modal__body" id="organ-list"></div>
-      </dialog>
-      <div class="grid grid--4" style="margin-top:48px">
-        <div class="card reveal"><h3>Assemblée générale</h3><p>Composée des membres effectifs, elle définit les orientations, adopte les statuts, approuve les comptes et élit le Conseil d'administration.</p></div>
-        <div class="card reveal"><h3>Conseil d'administration</h3><p>Administre l'association entre deux assemblées et nomme la Direction exécutive.</p></div>
-        <div class="card reveal"><h3>Comité de contrôle</h3><p>Veille à la bonne gestion des ressources et à la régularité des comptes.</p></div>
-        <div class="card reveal"><h3>Direction exécutive</h3><p>Assure la gestion quotidienne et coordonne les huit départements scientifiques.</p></div>
+        <div class="team-grid">
+        <article class="tcard reveal">
+          <div class="tcard__photo"><span aria-hidden="true">EM</span><img src="assets/equipe/erick-mukala-mayoyo.jpg" alt="Photo de Erick MUKALA MAYOYO" loading="lazy" onerror="this.remove()"></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Président</span>
+            <h4 class="tcard__name">Erick MUKALA MAYOYO</h4>
+            <dl class="tcard__facts"><div><dt>Niveau d&#x27;études</dt><dd>PhD</dd></div><div><dt>Profession / spécialité</dt><dd>Enseignant-chercheur</dd></div><div><dt>Qualité</dt><dd>Fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolais</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo"><span aria-hidden="true">EM</span><img src="assets/equipe/eugenie-misenga-kangoji.jpg" alt="Photo de Eugénie MISENGA KANGOJI" loading="lazy" onerror="this.remove()"></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Vice-présidente</span>
+            <h4 class="tcard__name">Eugénie MISENGA KANGOJI</h4>
+            <dl class="tcard__facts"><div><dt>Niveau d&#x27;études</dt><dd>MD, MPH</dd></div><div><dt>Profession / spécialité</dt><dd>Médecin de santé publique</dd></div><div><dt>Qualité</dt><dd>Co-fondatrice</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo"><span aria-hidden="true">EK</span><img src="assets/equipe/ernest-kamayi-mulumba.jpg" alt="Photo de Ernest KAMAYI MULUMBA" loading="lazy" onerror="this.remove()"></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Secrétaire</span>
+            <h4 class="tcard__name">Ernest KAMAYI MULUMBA</h4>
+            <dl class="tcard__facts"><div><dt>Niveau d&#x27;études</dt><dd>MPH</dd></div><div><dt>Profession / spécialité</dt><dd>Épidémiologiste</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolais</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo"><span aria-hidden="true">MM</span><img src="assets/equipe/monique-mushiya-tshilumba.jpg" alt="Photo de Sr Monique MUSHIYA TSHILUMBA" loading="lazy" onerror="this.remove()"></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Trésorière</span>
+            <h4 class="tcard__name">Sr Monique MUSHIYA TSHILUMBA</h4>
+            <dl class="tcard__facts"><div><dt>Niveau d&#x27;études</dt><dd>PhD(c)</dd></div><div><dt>Profession / spécialité</dt><dd>Enseignante</dd></div><div><dt>Qualité</dt><dd>Co-fondatrice</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo"><span aria-hidden="true">JD</span><img src="assets/equipe/joseph-debaif-mutombo-kayembe.jpg" alt="Photo de Joseph Debaïf MUTOMBO KAYEMBE" loading="lazy" onerror="this.remove()"></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Membre</span>
+            <h4 class="tcard__name">Joseph Debaïf MUTOMBO KAYEMBE</h4>
+            <dl class="tcard__facts"><div><dt>Niveau d&#x27;études</dt><dd>PhD(c)</dd></div><div><dt>Profession / spécialité</dt><dd>Épidémiologiste-Biostatisticien</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolais</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo"><span aria-hidden="true">WK</span><img src="assets/equipe/william-kanku-nkumbi.jpg" alt="Photo de William KANKU NKUMBI" loading="lazy" onerror="this.remove()"></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Membre</span>
+            <h4 class="tcard__name">William KANKU NKUMBI</h4>
+            <dl class="tcard__facts"><div><dt>Niveau d&#x27;études</dt><dd>L2 (Bac+5)</dd></div><div><dt>Profession / spécialité</dt><dd>Biologiste médical</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolais</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo"><span aria-hidden="true">MN</span><img src="assets/equipe/moise-nelson-muzembe-muamba.jpg" alt="Photo de Moïse Nelson MUZEMBE MUAMBA" loading="lazy" onerror="this.remove()"></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Membre</span>
+            <h4 class="tcard__name">Moïse Nelson MUZEMBE MUAMBA</h4>
+            <dl class="tcard__facts"><div><dt>Niveau d&#x27;études</dt><dd>L2 (Bac+5)</dd></div><div><dt>Profession / spécialité</dt><dd>Biologiste médical</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolais</dd></div></dl>
+          </div>
+        </article>
+        </div>
+      </div>
+      <div class="team-block">
+        <div class="team-block__head reveal">
+          <h3>Direction exécutive</h3>
+          <p>Organe de gestion quotidienne et opérationnelle, nommé par le Conseil d'administration. Les titulaires des postes seront présentés prochainement.</p>
+        </div>
+        <div class="team-grid">
+        <article class="tcard reveal">
+          <div class="tcard__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Directeur exécutif</span>
+            <h4 class="tcard__name tcard__name--pending">À désigner</h4>
+            <dl class="tcard__facts"><div><dt>Profil requis</dt><dd>Docteur à thèse (PhD)</dd></div><div><dt>Attributions</dt><dd>Direction de l&#x27;association, plan d&#x27;action, rapport annuel</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Directeur scientifique</span>
+            <h4 class="tcard__name tcard__name--pending">À désigner</h4>
+            <dl class="tcard__facts"><div><dt>Profil requis</dt><dd>Master au minimum</dd></div><div><dt>Attributions</dt><dd>Stratégie scientifique, recherche, publications, éthique</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Directeur de formation et développement des compétences</span>
+            <h4 class="tcard__name tcard__name--pending">À désigner</h4>
+            <dl class="tcard__facts"><div><dt>Profil requis</dt><dd>Master au minimum</dd></div><div><dt>Attributions</dt><dd>Stratégie pédagogique et plans de formation</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Directeur administratif et financier</span>
+            <h4 class="tcard__name tcard__name--pending">À désigner</h4>
+            <dl class="tcard__facts"><div><dt>Profil requis</dt><dd>Master au minimum</dd></div><div><dt>Attributions</dt><dd>Gestion administrative et financière, subventions, budget</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Assistant administratif et financier</span>
+            <h4 class="tcard__name tcard__name--pending">À désigner</h4>
+            <dl class="tcard__facts"><div><dt>Attributions</dt><dd>Unité de support</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Secrétaire</span>
+            <h4 class="tcard__name tcard__name--pending">À désigner</h4>
+            <dl class="tcard__facts"><div><dt>Attributions</dt><dd>Unité de support</dd></div></dl>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <div class="tcard__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="tcard__body">
+            <span class="tcard__role">Chargé de la logistique</span>
+            <h4 class="tcard__name tcard__name--pending">À désigner</h4>
+            <dl class="tcard__facts"><div><dt>Attributions</dt><dd>Unité de support</dd></div></dl>
+          </div>
+        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -238,7 +347,6 @@
     <div class="footer__bottom"><span>© <span data-year>2026</span> CARASS ASBL. Tous droits réservés.</span><span><em>Aliter cogitare et agere</em> — Penser et agir différemment</span></div>
   </div>
 </footer>
-<script src="assets/gouvernance.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>
