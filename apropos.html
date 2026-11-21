@@ -139,10 +139,10 @@
       </div>
       <figure class="orgchart reveal" aria-label="Organigramme de gouvernance du CARASS">
         <div class="orgchart__chain">
-          <div class="orgchart__box orgchart__box--1"><strong>Assemblée générale</strong><span>Organe souverain</span></div>
-          <div class="orgchart__box orgchart__box--2"><strong>Conseil d'administration</strong><span>5 à 8 administrateurs</span></div>
-          <div class="orgchart__box orgchart__box--3"><strong>Comité de contrôle</strong><span>Contrôle de la gestion et des comptes</span></div>
-          <button type="button" class="orgchart__box orgchart__box--4 orgchart__box--btn" data-open="direction-dialog" aria-haspopup="dialog"><strong>Direction exécutive</strong><span>Gestion quotidienne et opérationnelle</span><em>Voir les membres →</em></button>
+          <button type="button" class="orgchart__box orgchart__box--1 orgchart__box--btn" data-organ="assemblee" aria-haspopup="dialog"><strong>Assemblée générale</strong><span>Organe souverain · membres effectifs</span><em>Voir les membres →</em></button>
+          <button type="button" class="orgchart__box orgchart__box--2 orgchart__box--btn" data-organ="conseil" aria-haspopup="dialog"><strong>Conseil d'administration</strong><span>5 à 8 administrateurs</span><em>Voir les membres →</em></button>
+          <button type="button" class="orgchart__box orgchart__box--3 orgchart__box--btn" data-organ="controle" aria-haspopup="dialog"><strong>Comité de contrôle</strong><span>2 à 3 commissaires aux comptes</span><em>Voir les membres →</em></button>
+          <button type="button" class="orgchart__box orgchart__box--4 orgchart__box--btn" data-organ="direction" aria-haspopup="dialog"><strong>Direction exécutive</strong><span>Gestion quotidienne et opérationnelle</span><em>Voir les membres →</em></button>
         </div>
         <div class="orgchart__stem" aria-hidden="true"></div>
         <ol class="orgchart__depts">
@@ -157,16 +157,18 @@
         </ol>
         <figcaption>Les 8 départements</figcaption>
       </figure>
-      <dialog class="modal" id="direction-dialog" aria-labelledby="direction-title">
+      <p class="orgchart__hint">Cliquez sur un organe pour découvrir ses membres.</p>
+      <dialog class="modal" id="organ-dialog" aria-labelledby="organ-title">
         <div class="modal__head">
           <div>
             <span class="modal__kicker">Gouvernance</span>
-            <h2 id="direction-title">Direction exécutive</h2>
-            <p>Organe chargé de la gestion quotidienne et opérationnelle du CARASS, sous l'autorité du Conseil d'administration.</p>
+            <h2 id="organ-title"></h2>
+            <p id="organ-intro"></p>
+            <ul class="modal__facts" id="organ-facts"></ul>
           </div>
           <button type="button" class="modal__close" data-close aria-label="Fermer">×</button>
         </div>
-        <div class="modal__body" id="direction-list"></div>
+        <div class="modal__body" id="organ-list"></div>
       </dialog>
       <div class="grid grid--4" style="margin-top:48px">
         <div class="card reveal"><h3>Assemblée générale</h3><p>Composée des membres effectifs, elle définit les orientations, adopte les statuts, approuve les comptes et élit le Conseil d'administration.</p></div>
@@ -236,7 +238,7 @@
     <div class="footer__bottom"><span>© <span data-year>2026</span> CARASS ASBL. Tous droits réservés.</span><span><em>Aliter cogitare et agere</em> — Penser et agir différemment</span></div>
   </div>
 </footer>
-<script src="assets/direction.js"></script>
+<script src="assets/gouvernance.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>
