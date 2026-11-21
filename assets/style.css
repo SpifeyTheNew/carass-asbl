@@ -286,6 +286,69 @@ details.acc .acc__body li { margin-bottom: 6px; }
   border: 2px dashed var(--line); border-radius: var(--radius); padding: 40px; text-align: center; color: var(--muted);
 }
 
+/* ---------- Organigramme de gouvernance ---------- */
+.orgchart { margin: 0; --line-c: #9db7cf; --drop: 30px; --gap: 10px; }
+.orgchart__chain { display: flex; flex-direction: column; align-items: center; }
+.orgchart__box {
+  position: relative; width: min(100%, 340px); text-align: center;
+  border-radius: 12px; padding: 14px 18px; color: #fff;
+}
+.orgchart__box + .orgchart__box { margin-top: 28px; }
+.orgchart__box + .orgchart__box::before {
+  content: ""; position: absolute; left: 50%; top: -29px; height: 28px; border-left: 2px solid var(--line-c);
+}
+.orgchart__box strong { display: block; font-size: 1.02rem; }
+.orgchart__box span { display: block; font-size: .82rem; opacity: .85; }
+.orgchart__box--1 { background: var(--navy-deep); }
+.orgchart__box--2 { background: var(--navy); }
+.orgchart__box--3 { background: #0f6bb5; }
+.orgchart__box--4 { background: var(--sky); }
+.orgchart__stem { width: 0; height: var(--drop); margin: 0 auto; border-left: 2px solid var(--line-c); }
+.orgchart__depts {
+  list-style: none; margin: var(--drop) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(8, 1fr); gap: var(--gap);
+}
+.orgchart__depts li {
+  position: relative; background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--sky);
+  border-radius: 10px; padding: 12px 10px; font-size: .8rem; line-height: 1.35; font-weight: 600;
+  color: var(--navy-deep); text-align: center;
+}
+.orgchart__depts b { display: block; font-family: var(--font-serif); font-size: 1.15rem; color: var(--sky); margin-bottom: 4px; }
+/* lien vertical vers chaque département */
+.orgchart__depts li::before {
+  content: ""; position: absolute; left: 50%; top: calc(-1 * var(--drop) - 3px); height: var(--drop); border-left: 2px solid var(--line-c);
+}
+/* barre horizontale commune */
+.orgchart__depts li::after {
+  content: ""; position: absolute; top: calc(-1 * var(--drop) - 3px); left: calc(-1 * var(--gap) / 2 - 1px); right: calc(-1 * var(--gap) / 2 - 1px);
+  border-top: 2px solid var(--line-c);
+}
+.orgchart__depts li:first-child::after { left: 50%; }
+.orgchart__depts li:last-child::after { right: 50%; }
+.orgchart figcaption {
+  text-align: center; margin-top: 18px; font-size: .78rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted);
+}
+@media (max-width: 960px) {
+  /* arbre vertical : les départements se rattachent à une ligne à gauche */
+  .orgchart__depts {
+    grid-template-columns: 1fr; margin: 0; padding: 20px 0 0 28px; position: relative;
+  }
+  /* ligne horizontale du centre (sous la Direction) vers la colonne de gauche */
+  .orgchart__depts::after {
+    content: ""; position: absolute; left: 0; width: 50%; top: 0; border-top: 2px solid var(--line-c);
+  }
+  /* colonne verticale à gauche */
+  .orgchart__depts::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 26px; border-left: 2px solid var(--line-c);
+  }
+  .orgchart__depts li { text-align: left; display: flex; gap: 12px; align-items: center; border-top-width: 1px; border-left: 3px solid var(--sky); }
+  .orgchart__depts b { margin: 0; }
+  .orgchart__depts li::before { left: -28px; top: 50%; height: 0; width: 28px; border-left: 0; border-top: 2px solid var(--line-c); }
+  .orgchart__depts li::after { display: none; }
+  .orgchart figcaption { text-align: left; }
+}
+
 /* ---------- Sous-menus déroulants ---------- */
 .nav .has-sub { position: relative; }
 .nav .has-sub > a { display: flex; align-items: center; gap: 6px; }
