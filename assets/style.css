@@ -301,7 +301,7 @@ details.acc .acc__body li { margin-bottom: 6px; }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 960px) {
+@media (max-width: 1120px) {
   .nav-toggle { display: grid; place-items: center; }
   .nav {
     position: fixed; inset: 76px 0 auto 0; background: #fff; border-bottom: 1px solid var(--line);
@@ -311,6 +311,8 @@ details.acc .acc__body li { margin-bottom: 6px; }
   .nav ul { flex-direction: column; align-items: stretch; }
   .nav a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--sky); }
   .nav .btn { margin: 8px 0 0; justify-content: center; }
+}
+@media (max-width: 960px) {
   .hero__grid, .split { grid-template-columns: 1fr; }
   .hero__card { max-width: 420px; }
   .grid--3 { grid-template-columns: 1fr 1fr; }
