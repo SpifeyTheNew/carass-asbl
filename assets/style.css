@@ -157,6 +157,15 @@ p { margin: 0 0 1em; }
 }
 .page-hero h1 { color: #fff; }
 .page-hero .lead { color: #cfe0f2; }
+.page-hero__grid { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.page-hero__logo {
+  width: clamp(200px, 24vw, 320px); height: auto; border-radius: 18px;
+  border: 6px solid rgba(255,255,255,.9); box-shadow: 0 24px 60px -20px rgba(0,0,0,.5);
+}
+@media (max-width: 760px) {
+  .page-hero__grid { grid-template-columns: 1fr; gap: 28px; }
+  .page-hero__logo { width: 200px; }
+}
 .crumbs { font-size: .85rem; color: #9fbbd8; margin-bottom: 14px; }
 .crumbs a { color: #cfe0f2; text-decoration: none; }
 
