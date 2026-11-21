@@ -47,6 +47,30 @@
     });
   }
 
+  // Profils des membres (Conseil d'administration, Direction exécutive)
+  var pdlg = document.getElementById('profile-dialog');
+  var pcontent = document.getElementById('profile-content');
+  if (pdlg && pcontent && typeof pdlg.showModal === 'function') {
+    var lastCard = null;
+    var openProfile = function (id) {
+      var tpl = document.getElementById('profil-' + id);
+      if (!tpl) return;
+      pcontent.innerHTML = '';
+      pcontent.appendChild(tpl.content.cloneNode(true));
+      if (!pdlg.open) pdlg.showModal();
+      pcontent.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    };
+    document.querySelectorAll('[data-profile]').forEach(function (b) {
+      b.addEventListener('click', function () { lastCard = b; openProfile(b.getAttribute('data-profile')); });
+    });
+    pdlg.addEventListener('close', function () { document.body.style.overflow = ''; if (lastCard) lastCard.focus(); });
+    pdlg.addEventListener('click', function (e) { if (e.target === pdlg) pdlg.close(); });
+    pdlg.querySelectorAll('[data-close]').forEach(function (c) { c.addEventListener('click', function () { pdlg.close(); }); });
+    // Lien direct : apropos.html#profil-erick-mukala-mayoyo
+    if (/^#profil-/.test(location.hash)) openProfile(location.hash.slice(8));
+  }
+
   // Apparition au défilement
   var items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

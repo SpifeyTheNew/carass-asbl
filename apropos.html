@@ -158,6 +158,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name">Erick MUKALA MAYOYO</h4>
             <span class="tcard__role">Président</span>
+            <button type="button" class="tcard__link" data-profile="erick-mukala-mayoyo" aria-haspopup="dialog" aria-label="Voir le profil : Erick MUKALA MAYOYO">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -165,6 +166,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name">Eugénie MISENGA KANGOJI</h4>
             <span class="tcard__role">Vice-présidente</span>
+            <button type="button" class="tcard__link" data-profile="eugenie-misenga-kangoji" aria-haspopup="dialog" aria-label="Voir le profil : Eugénie MISENGA KANGOJI">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -172,6 +174,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name">Ernest KAMAYI MULUMBA</h4>
             <span class="tcard__role">Secrétaire</span>
+            <button type="button" class="tcard__link" data-profile="ernest-kamayi-mulumba" aria-haspopup="dialog" aria-label="Voir le profil : Ernest KAMAYI MULUMBA">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -179,6 +182,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name">Sr Monique MUSHIYA TSHILUMBA</h4>
             <span class="tcard__role">Trésorière</span>
+            <button type="button" class="tcard__link" data-profile="monique-mushiya-tshilumba" aria-haspopup="dialog" aria-label="Voir le profil : Sr Monique MUSHIYA TSHILUMBA">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -186,6 +190,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name">Joseph Debaïf MUTOMBO KAYEMBE</h4>
             <span class="tcard__role">Administrateur</span>
+            <button type="button" class="tcard__link" data-profile="joseph-debaif-mutombo-kayembe" aria-haspopup="dialog" aria-label="Voir le profil : Joseph Debaïf MUTOMBO KAYEMBE">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -193,6 +198,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name">William KANKU NKUMBI</h4>
             <span class="tcard__role">Administrateur</span>
+            <button type="button" class="tcard__link" data-profile="william-kanku-nkumbi" aria-haspopup="dialog" aria-label="Voir le profil : William KANKU NKUMBI">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -200,6 +206,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name">Moïse Nelson MUZEMBE MUAMBA</h4>
             <span class="tcard__role">Administrateur</span>
+            <button type="button" class="tcard__link" data-profile="moise-nelson-muzembe-muamba" aria-haspopup="dialog" aria-label="Voir le profil : Moïse Nelson MUZEMBE MUAMBA">Voir le profil →</button>
           </div>
         </article>
         </div>
@@ -214,6 +221,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name tcard__name--pending">À désigner</h4>
             <span class="tcard__role">Directeur exécutif</span>
+            <button type="button" class="tcard__link" data-profile="directeur-executif" aria-haspopup="dialog" aria-label="Voir le profil : Directeur exécutif">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -221,6 +229,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name tcard__name--pending">À désigner</h4>
             <span class="tcard__role">Directeur scientifique</span>
+            <button type="button" class="tcard__link" data-profile="directeur-scientifique" aria-haspopup="dialog" aria-label="Voir le profil : Directeur scientifique">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -228,6 +237,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name tcard__name--pending">À désigner</h4>
             <span class="tcard__role">Directeur de formation et développement des compétences</span>
+            <button type="button" class="tcard__link" data-profile="directeur-formation" aria-haspopup="dialog" aria-label="Voir le profil : Directeur de formation et développement des compétences">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -235,6 +245,7 @@
           <div class="tcard__body">
             <h4 class="tcard__name tcard__name--pending">À désigner</h4>
             <span class="tcard__role">Directeur administratif et financier</span>
+            <button type="button" class="tcard__link" data-profile="directeur-administratif-financier" aria-haspopup="dialog" aria-label="Voir le profil : Directeur administratif et financier">Voir le profil →</button>
           </div>
         </article>
         <article class="tcard reveal">
@@ -242,13 +253,113 @@
           <div class="tcard__body">
             <h4 class="tcard__name tcard__name--pending">À désigner</h4>
             <span class="tcard__role">Secrétaire</span>
+            <button type="button" class="tcard__link" data-profile="secretaire-direction" aria-haspopup="dialog" aria-label="Voir le profil : Secrétaire">Voir le profil →</button>
           </div>
         </article>
         </div>
       </div>
+      <dialog class="modal pmodal" id="profile-dialog" aria-label="Profil du membre">
+        <button type="button" class="modal__close pmodal__close" data-close aria-label="Fermer">×</button>
+        <div class="pmodal__content" id="profile-content"></div>
+      </dialog>
+      <template id="profil-erick-mukala-mayoyo">
+        <div class="pmodal__top">
+          <div class="pmodal__photo"><span aria-hidden="true">EM</span><img src="assets/equipe/erick-mukala-mayoyo.jpg" alt="Photo de Erick MUKALA MAYOYO" loading="lazy" onerror="this.remove()"></div>
+          <div><span class="pmodal__role">Président</span><h2 class="pmodal__name">Erick MUKALA MAYOYO</h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Niveau d&#x27;études</dt><dd>PhD</dd></div><div><dt>Profession / spécialité</dt><dd>Enseignant-chercheur</dd></div><div><dt>Qualité</dt><dd>Fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+        <h4>Présentation</h4><p>Erick Mukala est professeur associé à l’Institut Supérieur des Techniques Médicales (ISTM) de Kananga et à l’Université Simon Kimbangu, où il dispense plusieurs cours du domaine de santé publique, principalement axés sur les politiques et systèmes de santé, ainsi que sur la santé mentale publique. Il est enseignant invité à l’Institut de Médecine Tropicale (ITM) d’Anvers dans le cadre du programme de certificat postuniversitaire « Défis en santé internationale ».</p><h4>Formation</h4><p>Il est titulaire d’un double Doctorat (PhD) en sciences de la santé publique (Université Libre de Bruxelles [ULB]) et en santé publique (Université de Lubumbashi), d’un Master en santé publique, avec une spécialisation en politiques et management des systèmes de santé (ITM Anvers), d’un Master en écologie des maladies infectieuses (Université de Kinshasa) et d’une Licence en santé communautaire, avec une spécialisation en épidémiologie (ISTM Kinshasa).</p><p>Il détient également plusieurs certificats, dont le certificat universitaire en recherche pour le renforcement des systèmes de santé (ULB) et le certificat en politique de financement de la santé pour la couverture santé universelle de l’Organisation mondiale de la Santé.</p><h4>Expérience</h4><p>Il possède quinze ans d’expérience dans l’enseignement et la recherche universitaires, ainsi que près de dix ans d’expérience dans le renforcement des systèmes de santé, notamment par le renforcement des capacités techniques et managériales, l’intégration des services de santé, la documentation et/ou la capitalisation des expériences, ainsi que l’évaluation des programmes de santé, en particulier ceux financés par l’Union européenne, Enabel et Memisa en RDC et à l’étranger.</p><p>Il participe actuellement à l’accompagnement scientifique et à la capitalisation des recherches menées dans le cadre d’un appui institutionnel aux niveaux central et provincial du système de santé congolais, financé par Enabel.</p><p>Il est auteur et coauteur de plus de dix publications scientifiques.</p>
+      </template>
+      <template id="profil-eugenie-misenga-kangoji">
+        <div class="pmodal__top">
+          <div class="pmodal__photo"><span aria-hidden="true">EM</span><img src="assets/equipe/eugenie-misenga-kangoji.jpg" alt="Photo de Eugénie MISENGA KANGOJI" loading="lazy" onerror="this.remove()"></div>
+          <div><span class="pmodal__role">Vice-présidente</span><h2 class="pmodal__name">Eugénie MISENGA KANGOJI</h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Niveau d&#x27;études</dt><dd>MD, MPH</dd></div><div><dt>Profession / spécialité</dt><dd>Médecin de santé publique</dd></div><div><dt>Qualité</dt><dd>Co-fondatrice</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+        <p class="modal__empty" style="margin-top:22px">La biographie détaillée sera publiée prochainement.</p>
+      </template>
+      <template id="profil-ernest-kamayi-mulumba">
+        <div class="pmodal__top">
+          <div class="pmodal__photo"><span aria-hidden="true">EK</span><img src="assets/equipe/ernest-kamayi-mulumba.jpg" alt="Photo de Ernest KAMAYI MULUMBA" loading="lazy" onerror="this.remove()"></div>
+          <div><span class="pmodal__role">Secrétaire</span><h2 class="pmodal__name">Ernest KAMAYI MULUMBA</h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Niveau d&#x27;études</dt><dd>MPH</dd></div><div><dt>Profession / spécialité</dt><dd>Épidémiologiste</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+        <p class="modal__empty" style="margin-top:22px">La biographie détaillée sera publiée prochainement.</p>
+      </template>
+      <template id="profil-monique-mushiya-tshilumba">
+        <div class="pmodal__top">
+          <div class="pmodal__photo"><span aria-hidden="true">MM</span><img src="assets/equipe/monique-mushiya-tshilumba.jpg" alt="Photo de Sr Monique MUSHIYA TSHILUMBA" loading="lazy" onerror="this.remove()"></div>
+          <div><span class="pmodal__role">Trésorière</span><h2 class="pmodal__name">Sr Monique MUSHIYA TSHILUMBA</h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Niveau d&#x27;études</dt><dd>PhD(c)</dd></div><div><dt>Profession / spécialité</dt><dd>Enseignante</dd></div><div><dt>Qualité</dt><dd>Co-fondatrice</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+        <p class="modal__empty" style="margin-top:22px">La biographie détaillée sera publiée prochainement.</p>
+      </template>
+      <template id="profil-joseph-debaif-mutombo-kayembe">
+        <div class="pmodal__top">
+          <div class="pmodal__photo"><span aria-hidden="true">JD</span><img src="assets/equipe/joseph-debaif-mutombo-kayembe.jpg" alt="Photo de Joseph Debaïf MUTOMBO KAYEMBE" loading="lazy" onerror="this.remove()"></div>
+          <div><span class="pmodal__role">Administrateur</span><h2 class="pmodal__name">Joseph Debaïf MUTOMBO KAYEMBE</h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Niveau d&#x27;études</dt><dd>PhD(c)</dd></div><div><dt>Profession / spécialité</dt><dd>Épidémiologiste-Biostatisticien</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+        <p class="modal__empty" style="margin-top:22px">La biographie détaillée sera publiée prochainement.</p>
+      </template>
+      <template id="profil-william-kanku-nkumbi">
+        <div class="pmodal__top">
+          <div class="pmodal__photo"><span aria-hidden="true">WK</span><img src="assets/equipe/william-kanku-nkumbi.jpg" alt="Photo de William KANKU NKUMBI" loading="lazy" onerror="this.remove()"></div>
+          <div><span class="pmodal__role">Administrateur</span><h2 class="pmodal__name">William KANKU NKUMBI</h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Niveau d&#x27;études</dt><dd>L2 (Bac+5)</dd></div><div><dt>Profession / spécialité</dt><dd>Biologiste médical</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+        <p class="modal__empty" style="margin-top:22px">La biographie détaillée sera publiée prochainement.</p>
+      </template>
+      <template id="profil-moise-nelson-muzembe-muamba">
+        <div class="pmodal__top">
+          <div class="pmodal__photo"><span aria-hidden="true">MN</span><img src="assets/equipe/moise-nelson-muzembe-muamba.jpg" alt="Photo de Moïse Nelson MUZEMBE MUAMBA" loading="lazy" onerror="this.remove()"></div>
+          <div><span class="pmodal__role">Administrateur</span><h2 class="pmodal__name">Moïse Nelson MUZEMBE MUAMBA</h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Niveau d&#x27;études</dt><dd>L2 (Bac+5)</dd></div><div><dt>Profession / spécialité</dt><dd>Biologiste médical</dd></div><div><dt>Qualité</dt><dd>Co-fondateur</dd></div><div><dt>Nationalité</dt><dd>Congolaise</dd></div></dl>
+        <p class="modal__empty" style="margin-top:22px">La biographie détaillée sera publiée prochainement.</p>
+      </template>
+      <template id="profil-directeur-executif">
+        <div class="pmodal__top">
+          <div class="pmodal__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div><span class="pmodal__role">Directeur exécutif</span><h2 class="pmodal__name"><span class="member__pending">À désigner</span></h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Profil requis</dt><dd>Docteur à thèse (PhD), compétences professionnelles et probité morale avérées</dd></div></dl>
+        <h4>Attributions</h4><p>Assure la direction exécutive de l&#x27;association et la représente dans les actes de la vie courante ; exécute les décisions du Conseil d&#x27;administration ; élabore et met en œuvre le plan d&#x27;action ; supervise les activités scientifiques, administratives et techniques ; gère les ressources humaines, financières et matérielles et présente le rapport annuel de gestion.</p><p class="modal__empty" style="margin-top:22px">Le titulaire de ce poste sera présenté prochainement.</p>
+      </template>
+      <template id="profil-directeur-scientifique">
+        <div class="pmodal__top">
+          <div class="pmodal__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div><span class="pmodal__role">Directeur scientifique</span><h2 class="pmodal__name"><span class="member__pending">À désigner</span></h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Profil requis</dt><dd>Master au minimum dans un domaine pertinent de la santé</dd></div></dl>
+        <h4>Attributions</h4><p>Définit et pilote la stratégie scientifique, les programmes, projets et opérations ; promeut, soutient et supervise la recherche en santé ; assure la mobilisation des connaissances et la valorisation des travaux ; veille à l&#x27;innovation et au respect de l&#x27;éthique.</p><p class="modal__empty" style="margin-top:22px">Le titulaire de ce poste sera présenté prochainement.</p>
+      </template>
+      <template id="profil-directeur-formation">
+        <div class="pmodal__top">
+          <div class="pmodal__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div><span class="pmodal__role">Directeur de formation et développement des compétences</span><h2 class="pmodal__name"><span class="member__pending">À désigner</span></h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Profil requis</dt><dd>Master au minimum dans un domaine pertinent de la santé</dd></div></dl>
+        <h4>Attributions</h4><p>Définit et pilote la stratégie pédagogique ; évalue les besoins, conçoit et exécute les plans de formation et de renforcement des capacités ; assure une veille technologique pour adapter les compétences aux programmes.</p><p class="modal__empty" style="margin-top:22px">Le titulaire de ce poste sera présenté prochainement.</p>
+      </template>
+      <template id="profil-directeur-administratif-financier">
+        <div class="pmodal__top">
+          <div class="pmodal__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div><span class="pmodal__role">Directeur administratif et financier</span><h2 class="pmodal__name"><span class="member__pending">À désigner</span></h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Profil requis</dt><dd>Master au minimum en santé publique ou en sciences de gestion</dd></div></dl>
+        <h4>Attributions</h4><p>Met en œuvre la politique administrative et financière ; garantit la conformité des projets, le suivi des subventions et l&#x27;optimisation du budget ; gère la trésorerie et supervise les services de support.</p><p class="modal__empty" style="margin-top:22px">Le titulaire de ce poste sera présenté prochainement.</p>
+      </template>
+      <template id="profil-secretaire-direction">
+        <div class="pmodal__top">
+          <div class="pmodal__photo tcard__photo--empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div><span class="pmodal__role">Secrétaire</span><h2 class="pmodal__name"><span class="member__pending">À désigner</span></h2></div>
+        </div>
+        <dl class="profile__facts"><div><dt>Rattachement</dt><dd>Unité de support de la Direction exécutive</dd></div></dl>
+        <h4>Attributions</h4><p>Assure le secrétariat de la Direction exécutive.</p><p class="modal__empty" style="margin-top:22px">Le titulaire de ce poste sera présenté prochainement.</p>
+      </template>
     </div>
   </section>
-
 
   <section class="section">
     <div class="container">

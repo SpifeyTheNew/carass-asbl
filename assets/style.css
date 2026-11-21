@@ -522,6 +522,50 @@ details.acc .acc__body li { margin-bottom: 6px; }
 .tcard__facts dt { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .tcard__facts dd { margin: 0; font-size: .92rem; color: var(--ink); }
 .section--alt .tcard { background: #fff; }
+.tcard { position: relative; }
+.tcard__body { display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
+.tcard__link {
+  margin-top: auto; padding: 14px 0 0; background: none; border: 0; cursor: pointer;
+  font: inherit; font-size: .85rem; font-weight: 700; color: var(--sky);
+}
+.tcard__link::after { content: ""; position: absolute; inset: 0; border-radius: 16px; } /* toute la carte est cliquable */
+.tcard__link:focus-visible { outline: none; }
+.tcard__link:focus-visible::after { outline: 3px solid var(--sky); outline-offset: 2px; }
+.tcard:hover .tcard__link { color: var(--navy); }
+.tcard { cursor: pointer; }
+
+/* Fenêtre de profil */
+.pmodal { position: fixed; width: min(820px, calc(100vw - 32px)); }
+.pmodal__close {
+  position: absolute; top: 16px; right: 16px; z-index: 2;
+  border-color: var(--line); color: var(--navy-deep); background: #fff;
+}
+.pmodal__close:hover { background: var(--sky-soft); }
+.pmodal__content { overflow-y: auto; min-height: 0; flex: 1; padding: 32px 36px 36px; }
+.pmodal__top { display: flex; gap: 26px; align-items: center; margin: 0 48px 26px 0; }
+.pmodal__photo {
+  position: relative; width: 140px; height: 140px; flex-shrink: 0; border-radius: 18px; overflow: hidden;
+  display: grid; place-items: center; background: linear-gradient(135deg, var(--navy), var(--sky));
+  color: #fff; font-family: var(--font-serif); font-size: 2.6rem; font-weight: 600;
+}
+.pmodal__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pmodal__photo.tcard__photo--empty { background: linear-gradient(135deg, #dfe9f3, #c9dbeb); color: #8aa6c1; }
+.pmodal__photo.tcard__photo--empty svg { width: 60%; height: 60%; }
+.pmodal__name { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); margin: 8px 0 0; }
+.pmodal__role {
+  display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--navy); background: var(--sky-soft); border-radius: 999px; padding: 4px 12px;
+}
+.pmodal__content .profile__facts { padding: 18px 20px; background: var(--bg-alt); border-radius: 12px; }
+.pmodal__content h4 { margin: 26px 0 8px; font-size: 1rem; color: var(--navy-deep); display: flex; align-items: center; gap: 10px; }
+.pmodal__content h4::before { content: ""; width: 18px; height: 3px; border-radius: 2px; background: var(--sky); }
+.pmodal__content p { color: var(--ink); margin: 0 0 10px; line-height: 1.7; }
+@media (max-width: 640px) {
+  .pmodal__content { padding: 24px 18px 28px; }
+  .pmodal__top { flex-direction: column; align-items: flex-start; gap: 14px; margin-right: 40px; }
+  .pmodal__photo { width: 110px; height: 110px; }
+  .pmodal__content .profile__facts { grid-template-columns: 1fr; }
+}
 
 /* ---------- Sous-menus déroulants ---------- */
 .nav .has-sub { position: relative; }
