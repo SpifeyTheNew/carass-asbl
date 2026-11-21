@@ -58,6 +58,20 @@ p { margin: 0 0 1em; }
 .dots i:nth-child(1) { background: var(--red); }
 .dots i:nth-child(2) { background: var(--yellow); }
 .dots i:nth-child(3) { background: var(--green); }
+/* Titres de section (avec les 3 points) plus grands que le sous-titre qui suit */
+.eyebrow {
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem); letter-spacing: .05em; gap: 14px;
+  color: #0d86b8; margin-bottom: 10px; line-height: 1.2;
+}
+.eyebrow .dots i { width: 11px; height: 11px; }
+.eyebrow + h2 {
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem); font-weight: 500; color: var(--navy);
+  margin-bottom: .8em; line-height: 1.35;
+}
+.section--navy .eyebrow { color: #8fd8f6; }
+.section--navy .eyebrow + h2 { color: #dbe8f6; }
+.hero .eyebrow { font-size: .78rem; letter-spacing: .14em; gap: 10px; }
+.hero .eyebrow .dots i { width: 8px; height: 8px; }
 .lead { font-size: 1.15rem; color: var(--muted); max-width: 62ch; }
 .section--navy .lead { color: #b9cde3; }
 
