@@ -142,7 +142,7 @@
           <div class="orgchart__box orgchart__box--1"><strong>Assemblée générale</strong><span>Organe souverain</span></div>
           <div class="orgchart__box orgchart__box--2"><strong>Conseil d'administration</strong><span>5 à 8 administrateurs</span></div>
           <div class="orgchart__box orgchart__box--3"><strong>Comité de contrôle</strong><span>Contrôle de la gestion et des comptes</span></div>
-          <div class="orgchart__box orgchart__box--4"><strong>Direction exécutive</strong><span>Gestion quotidienne et opérationnelle</span></div>
+          <button type="button" class="orgchart__box orgchart__box--4 orgchart__box--btn" data-open="direction-dialog" aria-haspopup="dialog"><strong>Direction exécutive</strong><span>Gestion quotidienne et opérationnelle</span><em>Voir les membres →</em></button>
         </div>
         <div class="orgchart__stem" aria-hidden="true"></div>
         <ol class="orgchart__depts">
@@ -157,6 +157,17 @@
         </ol>
         <figcaption>Les 8 départements</figcaption>
       </figure>
+      <dialog class="modal" id="direction-dialog" aria-labelledby="direction-title">
+        <div class="modal__head">
+          <div>
+            <span class="modal__kicker">Gouvernance</span>
+            <h2 id="direction-title">Direction exécutive</h2>
+            <p>Organe chargé de la gestion quotidienne et opérationnelle du CARASS, sous l'autorité du Conseil d'administration.</p>
+          </div>
+          <button type="button" class="modal__close" data-close aria-label="Fermer">×</button>
+        </div>
+        <div class="modal__body" id="direction-list"></div>
+      </dialog>
       <div class="grid grid--4" style="margin-top:48px">
         <div class="card reveal"><h3>Assemblée générale</h3><p>Composée des membres effectifs, elle définit les orientations, adopte les statuts, approuve les comptes et élit le Conseil d'administration.</p></div>
         <div class="card reveal"><h3>Conseil d'administration</h3><p>Administre l'association entre deux assemblées et nomme la Direction exécutive.</p></div>
@@ -225,6 +236,7 @@
     <div class="footer__bottom"><span>© <span data-year>2026</span> CARASS ASBL. Tous droits réservés.</span><span><em>Aliter cogitare et agere</em> — Penser et agir différemment</span></div>
   </div>
 </footer>
+<script src="assets/direction.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>

@@ -47,6 +47,56 @@
     });
   }
 
+  // Direction exécutive : fiches des membres
+  var list = document.getElementById('direction-list');
+  if (list && window.CARASS_DIRECTION) {
+    var esc = function (s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    };
+    var initials = function (name) {
+      return name.replace(/^(Prof\.?|Dr\.?|Pr\.?)\s+/i, '').split(/\s+/).slice(0, 2)
+        .map(function (w) { return w.charAt(0); }).join('').toUpperCase();
+    };
+    list.innerHTML = window.CARASS_DIRECTION.map(function (m) {
+      var photo = m.photo
+        ? '<img class="member__photo" src="' + esc(m.photo) + '" alt="Photo de ' + esc(m.nom || m.role) + '">'
+        : '<div class="member__photo member__photo--empty" aria-hidden="true">' +
+          (m.nom ? esc(initials(m.nom)) : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>') +
+          '</div>';
+      var links = [];
+      if (m.email) links.push('<a href="mailto:' + esc(m.email) + '">' + esc(m.email) + '</a>');
+      if (m.telephone) links.push('<a href="tel:' + esc(m.telephone.replace(/\s/g, '')) + '">' + esc(m.telephone) + '</a>');
+      if (/^https?:\/\//i.test(m.linkedin || '')) links.push('<a href="' + esc(m.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a>');
+      return '<article class="member">' + photo +
+        '<div class="member__info">' +
+          '<span class="member__role">' + esc(m.role) + '</span>' +
+          '<h3>' + (m.nom ? esc(m.nom) : '<span class="member__pending">Nom à venir</span>') + '</h3>' +
+          (m.titre ? '<p class="member__title">' + esc(m.titre) + '</p>' : '') +
+          (m.bio ? '<p>' + esc(m.bio) + '</p>' : '') +
+          (m.mission ? '<p class="member__mission"><strong>Rôle :</strong> ' + esc(m.mission) + '</p>' : '') +
+          (links.length ? '<p class="member__links">' + links.join(' · ') + '</p>' : '') +
+        '</div></article>';
+    }).join('');
+  }
+
+  // Fenêtres modales
+  document.querySelectorAll('[data-open]').forEach(function (btn) {
+    var dlg = document.getElementById(btn.getAttribute('data-open'));
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    btn.addEventListener('click', function () { dlg.showModal(); document.body.style.overflow = 'hidden'; });
+    dlg.addEventListener('close', function () { document.body.style.overflow = ''; btn.focus(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.querySelectorAll('[data-close]').forEach(function (c) {
+      c.addEventListener('click', function () { dlg.close(); });
+    });
+    // Lien direct : apropos.html#direction ouvre la fenêtre
+    if (location.hash === '#direction' && dlg.id === 'direction-dialog') {
+      dlg.showModal(); document.body.style.overflow = 'hidden';
+    }
+  });
+
   // Apparition au défilement
   var items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
