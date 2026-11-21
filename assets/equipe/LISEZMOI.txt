@@ -1,0 +1,1 @@
+Déposez ici les photos des membres (ex. jean-kabila.jpg), puis indiquez le chemin dans assets/gouvernance.js.

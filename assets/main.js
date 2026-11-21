@@ -61,37 +61,72 @@
         .map(function (w) { return w.charAt(0); }).join('').toUpperCase();
     };
     var silhouette = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>';
-    var card = function (m) {
-      var photo = m.photo
-        ? '<img class="member__photo" src="' + esc(m.photo) + '" alt="Photo de ' + esc(m.nom || m.role) + '">'
-        : '<div class="member__photo member__photo--empty" aria-hidden="true">' + (m.nom ? esc(initials(m.nom)) : silhouette) + '</div>';
+    var photoOf = function (m, cls) {
+      return m.photo
+        ? '<img class="' + cls + '" src="' + esc(m.photo) + '" alt="Photo de ' + esc(m.nom || m.role) + '">'
+        : '<div class="' + cls + ' member__photo--empty" aria-hidden="true">' + (m.nom ? esc(initials(m.nom)) : silhouette) + '</div>';
+    };
+    var nameOf = function (m) { return m.nom ? esc(m.nom) : '<span class="member__pending">Nom à venir</span>'; };
+    var current = null;
+    var card = function (m, i) {
+      return '<button type="button" class="member" data-member="' + i + '">' + photoOf(m, 'member__photo') +
+        '<span class="member__info">' +
+          '<span class="member__role">' + esc(m.role || '') + '</span>' +
+          '<span class="member__name">' + nameOf(m) + '</span>' +
+          (m.titre ? '<span class="member__title">' + esc(m.titre) + '</span>' : '') +
+          (m.specialite ? '<span class="member__spec">' + esc(m.specialite) + '</span>' : '') +
+          '<span class="member__more">Voir la fiche →</span>' +
+        '</span></button>';
+    };
+    var row = function (label, val) { return val ? '<div><dt>' + label + '</dt><dd>' + esc(val) + '</dd></div>' : ''; };
+    var profile = function (m) {
       var links = [];
       if (m.email) links.push('<a href="mailto:' + esc(m.email) + '">' + esc(m.email) + '</a>');
       if (m.telephone) links.push('<a href="tel:' + esc(m.telephone.replace(/\s/g, '')) + '">' + esc(m.telephone) + '</a>');
       if (/^https?:\/\//i.test(m.linkedin || '')) links.push('<a href="' + esc(m.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a>');
-      return '<article class="member">' + photo +
-        '<div class="member__info">' +
-          '<span class="member__role">' + esc(m.role || '') + '</span>' +
-          '<h3>' + (m.nom ? esc(m.nom) : '<span class="member__pending">Nom à venir</span>') + '</h3>' +
-          (m.titre ? '<p class="member__title">' + esc(m.titre) + '</p>' : '') +
-          (m.bio ? '<p>' + esc(m.bio) + '</p>' : '') +
-          (m.mission ? '<p class="member__mission"><strong>Rôle :</strong> ' + esc(m.mission) + '</p>' : '') +
-          (links.length ? '<p class="member__links">' + links.join(' · ') + '</p>' : '') +
-        '</div></article>';
+      var facts = row('Diplômes / grade', m.titre) + row('Spécialité', m.specialite) + row('Institution', m.institution) + row('Pays', m.pays);
+      return '<div class="profile">' +
+        '<button type="button" class="profile__back" data-back>← Retour aux membres</button>' +
+        '<div class="profile__top">' + photoOf(m, 'profile__photo') +
+          '<div><span class="member__role">' + esc(m.role || '') + '</span><h3>' + nameOf(m) + '</h3>' +
+          (facts ? '<dl class="profile__facts">' + facts + '</dl>' : '') + '</div></div>' +
+        (m.bio ? '<h4>Présentation</h4><p>' + esc(m.bio) + '</p>' : '') +
+        (m.experience ? '<h4>Parcours et expérience</h4><p>' + esc(m.experience) + '</p>' : '') +
+        (m.mission ? '<h4>Rôle au CARASS</h4><p>' + esc(m.mission) + '</p>' : '') +
+        (links.length ? '<h4>Contact</h4><p class="member__links">' + links.join(' · ') + '</p>' : '') +
+        (!m.nom && !m.bio ? '<p class="modal__empty" style="margin-top:20px">Les informations de ce membre seront publiées prochainement.</p>' : '') +
+      '</div>';
     };
+    var listEl = document.getElementById('organ-list');
+    var showList = function () {
+      var membres = (current && current.membres) || [];
+      listEl.classList.remove('is-profile');
+      listEl.innerHTML = membres.length
+        ? membres.map(card).join('')
+        : '<p class="modal__empty">' + esc(current.vide || 'Les membres seront présentés prochainement.') + '</p>';
+    };
+    listEl.addEventListener('click', function (e) {
+      var c = e.target.closest('[data-member]');
+      if (c) {
+        listEl.classList.add('is-profile');
+        listEl.innerHTML = profile(current.membres[+c.getAttribute('data-member')]);
+        dlg.scrollTop = 0; listEl.scrollTop = 0;
+        var back = listEl.querySelector('[data-back]'); if (back) back.focus();
+        return;
+      }
+      if (e.target.closest('[data-back]')) { showList(); }
+    });
     var lastBtn = null;
     var openOrgan = function (key) {
       var o = organs[key];
       if (!o) return;
+      current = o;
       document.getElementById('organ-title').textContent = o.titre;
       document.getElementById('organ-intro').textContent = o.intro || '';
       document.getElementById('organ-facts').innerHTML = (o.composition || []).map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('');
-      var membres = o.membres || [];
-      document.getElementById('organ-list').innerHTML = membres.length
-        ? membres.map(card).join('')
-        : '<p class="modal__empty">' + esc(o.vide || 'Les membres seront présentés prochainement.') + '</p>';
+      showList();
       if (!dlg.open) dlg.showModal();
-      dlg.scrollTop = 0;
+      listEl.scrollTop = 0;
       document.body.style.overflow = 'hidden';
     };
     document.querySelectorAll('[data-organ]').forEach(function (btn) {
