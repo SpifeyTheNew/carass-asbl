@@ -18,8 +18,22 @@
     <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <nav class="nav" aria-label="Navigation principale">
       <ul>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li class="has-sub"><a href="apropos.html">À propos</a>
+          <ul class="sub">
+            <li><a href="apropos.html#qui-sommes-nous">Qui sommes-nous</a></li>
+            <li><a href="apropos.html#missions-valeurs">Missions et valeurs</a></li>
+            <li><a href="apropos.html#gouvernance">Gouvernance</a></li>
+            <li><a href="apropos.html#equipe">Équipe</a></li>
+          </ul></li>
+        <li class="has-sub"><a href="services.html">Services</a>
+          <ul class="sub">
+            <li><a href="services.html#recherche">Recherche en santé publique</a></li>
+            <li><a href="services.html#suivi-evaluation">Suivi et évaluation</a></li>
+            <li><a href="services.html#donnees">Données</a></li>
+            <li><a href="services.html#synthese-evidence">Synthèse de l'évidence</a></li>
+            <li><a href="services.html#dialogue-politique">Dialogue politique</a></li>
+            <li><a href="services.html#gestion-projets">Gestion de projets</a></li>
+          </ul></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="actualites.html">Actualités</a></li>
         <li><a href="formations.html">Formations</a></li>
@@ -85,19 +99,19 @@
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
           <h3>Recherche</h3>
           <p>Études, enquêtes, évaluations et recherche opérationnelle en santé publique et sur les politiques et systèmes de santé.</p>
-          <a href="services.html#axes">Voir les activités →</a>
+          <a href="services.html#recherche">Nos services de recherche →</a>
         </article>
         <article class="mission mission--2 reveal">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
           <h3>Formation</h3>
           <p>Formation initiale et continue, mentorat, encadrement de travaux de licence, master et doctorat, outils d'analyse et IA.</p>
-          <a href="services.html#axes">Voir les activités →</a>
+          <a href="formations.html">Nos formations →</a>
         </article>
         <article class="mission mission--3 reveal">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/></svg></div>
           <h3>Appui aux systèmes de santé</h3>
           <p>Appui scientifique, technique et stratégique aux ministères, programmes, ONG et partenaires techniques et financiers.</p>
-          <a href="services.html#axes">Voir les activités →</a>
+          <a href="services.html">Tous nos services →</a>
         </article>
       </div>
     </div>

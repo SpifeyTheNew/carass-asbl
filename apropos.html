@@ -18,8 +18,22 @@
     <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <nav class="nav" aria-label="Navigation principale">
       <ul>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li class="has-sub"><a href="apropos.html">À propos</a>
+          <ul class="sub">
+            <li><a href="apropos.html#qui-sommes-nous">Qui sommes-nous</a></li>
+            <li><a href="apropos.html#missions-valeurs">Missions et valeurs</a></li>
+            <li><a href="apropos.html#gouvernance">Gouvernance</a></li>
+            <li><a href="apropos.html#equipe">Équipe</a></li>
+          </ul></li>
+        <li class="has-sub"><a href="services.html">Services</a>
+          <ul class="sub">
+            <li><a href="services.html#recherche">Recherche en santé publique</a></li>
+            <li><a href="services.html#suivi-evaluation">Suivi et évaluation</a></li>
+            <li><a href="services.html#donnees">Données</a></li>
+            <li><a href="services.html#synthese-evidence">Synthèse de l'évidence</a></li>
+            <li><a href="services.html#dialogue-politique">Dialogue politique</a></li>
+            <li><a href="services.html#gestion-projets">Gestion de projets</a></li>
+          </ul></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="actualites.html">Actualités</a></li>
         <li><a href="formations.html">Formations</a></li>
@@ -38,10 +52,19 @@
     </div>
   </section>
 
-  <section class="section">
+  <nav class="subnav" aria-label="Sections de la page">
+    <div class="container"><ul>
+      <li><a href="#qui-sommes-nous">Qui sommes-nous</a></li>
+      <li><a href="#missions-valeurs">Missions et valeurs</a></li>
+      <li><a href="#gouvernance">Gouvernance</a></li>
+      <li><a href="#equipe">Équipe</a></li>
+    </ul></div>
+  </nav>
+
+  <section class="section anchor" id="qui-sommes-nous">
     <div class="container split">
       <div class="reveal">
-        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Présentation</span>
+        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Qui sommes-nous</span>
         <h2>Le CARASS en bref</h2>
         <p>Le <strong>Centre Africain de Recherche et d'Appui aux Systèmes de Santé (CARASS)</strong> est une Association Sans But Lucratif de droit congolais, créée à Kinshasa en 2026 conformément à la Loi n°004/2001 du 20 juillet 2001.</p>
         <p>Il s'agit d'un organisme dédié à la recherche scientifique et technique et à la formation dans le domaine de la santé publique, ainsi qu'à l'appui scientifique, technique et stratégique aux systèmes de santé et à la promotion de l'innovation technologique.</p>
@@ -57,16 +80,41 @@
         </ul>
       </div>
     </div>
+    <div class="container split" style="margin-top:72px">
+      <div class="reveal" style="max-width:380px">
+        <img src="assets/logo.jpg" alt="Logo du CARASS" width="700" height="676" style="border-radius:18px;box-shadow:var(--shadow)">
+      </div>
+      <div class="reveal">
+        <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:600">La signification du logo</h3>
+        <ul class="list-check">
+          <li><strong>Les carrés</strong> symbolisent la logique.</li>
+          <li><strong>Le bleu foncé et le bleu clair</strong> symbolisent la santé et le bien-être.</li>
+          <li><strong>Le caducée</strong> représente la santé publique et l'appui aux systèmes de santé.</li>
+          <li><strong>Le polygone de fréquence</strong> représente la mesure, l'évaluation, l'étude et la recherche.</li>
+          <li><strong>La carte d'Afrique</strong> représente l'Afrique et sa population.</li>
+          <li><strong>Les cercles rouge, jaune et vert</strong> représentent l'état de santé et des indicateurs du système de santé.</li>
+        </ul>
+        <p style="margin-top:20px">Devise : <em style="font-family:var(--font-serif);font-size:1.2rem;color:var(--navy)">Aliter cogitare et agere</em> — « Penser et agir différemment ».</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--alt anchor" id="missions-valeurs">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Vision &amp; valeurs</span>
+        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Missions et valeurs</span>
         <h2>Ce qui nous guide</h2>
         <blockquote class="quote">Être un centre d'excellence de premier plan en Afrique qui contribue au développement de systèmes de santé performants, équitables, résilients, participatifs et fondés sur des données probantes au service de la population.</blockquote>
       </div>
-      <div class="values reveal">
+      <h3 class="reveal">Nos trois missions</h3>
+      <p class="reveal" style="color:var(--muted);max-width:70ch">Contribuer à l'amélioration durable de la santé et du bien-être des populations ainsi qu'au développement durable des communautés.</p>
+      <div class="grid grid--3" style="margin:24px 0 56px">
+        <article class="mission mission--1 reveal"><h3>Recherche</h3><p>Réaliser, soutenir et promouvoir des études et travaux de recherche, ainsi que la production, la diffusion et le partage des connaissances.</p></article>
+        <article class="mission mission--2 reveal"><h3>Formation</h3><p>Développer des actions de formation initiale et continue, de renforcement des compétences et de développement professionnel.</p></article>
+        <article class="mission mission--3 reveal"><h3>Appui aux systèmes de santé</h3><p>Apporter un appui technique, institutionnel et opérationnel pour des systèmes de santé performants, équitables, résilients et durables.</p></article>
+      </div>
+      <h3 class="reveal">Nos valeurs</h3>
+      <div class="values reveal" style="margin-top:16px">
         <div><strong>Rechercher</strong><span>Produire, promouvoir et valoriser la recherche scientifique.</span></div>
         <div><strong>Former</strong><span>Renforcer durablement les capacités des acteurs de santé.</span></div>
         <div><strong>Appuyer</strong><span>Accompagner les institutions vers des systèmes plus performants.</span></div>
@@ -82,28 +130,7 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container split">
-      <div class="reveal" style="max-width:420px">
-        <img src="assets/logo.jpg" alt="Logo du CARASS" width="700" height="676" style="border-radius:18px;box-shadow:var(--shadow)">
-      </div>
-      <div class="reveal">
-        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Notre identité</span>
-        <h2>La signification du logo</h2>
-        <ul class="list-check">
-          <li><strong>Les carrés</strong> symbolisent la logique.</li>
-          <li><strong>Le bleu foncé et le bleu clair</strong> symbolisent la santé et le bien-être.</li>
-          <li><strong>Le caducée</strong> représente la santé publique et l'appui aux systèmes de santé.</li>
-          <li><strong>Le polygone de fréquence</strong> représente la mesure, l'évaluation, l'étude et la recherche.</li>
-          <li><strong>La carte d'Afrique</strong> représente l'Afrique et sa population.</li>
-          <li><strong>Les cercles rouge, jaune et vert</strong> représentent l'état de santé et des indicateurs du système de santé.</li>
-        </ul>
-        <p style="margin-top:20px">Devise : <em style="font-family:var(--font-serif);font-size:1.2rem;color:var(--navy)">Aliter cogitare et agere</em> — « Penser et agir différemment ».</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="gouvernance">
+  <section class="section anchor" id="gouvernance">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Gouvernance</span>
@@ -119,21 +146,41 @@
           <div class="org__box"><strong>Commission de contrôle</strong><span>Contrôle de la gestion et des comptes</span></div>
         </div>
       </div>
-      <div class="grid grid--4" style="margin-top:40px">
+      <div class="grid grid--3" style="margin-top:40px">
+        <div class="card reveal"><h3>Assemblée générale</h3><p>Composée des membres effectifs, elle définit les orientations, adopte les statuts, approuve les comptes et élit le Conseil d'administration.</p></div>
+        <div class="card reveal"><h3>Conseil d'administration</h3><p>Administre l'association entre deux assemblées et nomme la Direction exécutive.</p></div>
+        <div class="card reveal"><h3>Conseil scientifique &amp; Commission de contrôle</h3><p>Garantissent la qualité scientifique des travaux et la bonne gestion des ressources.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt anchor" id="equipe">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Équipe</span>
+        <h2>Notre équipe</h2>
+        <p class="lead">Des scientifiques, professionnels et consultants en santé publique et domaines connexes, engagés pour des systèmes de santé plus performants.</p>
+      </div>
+      <div class="person reveal">
+        <div class="person__avatar" aria-hidden="true">EM</div>
+        <div><strong>Prof. Erick Mukala Mayoyo, PhD</strong><span>Président du Conseil d'administration</span></div>
+      </div>
+      <h3 class="reveal" style="margin-top:48px">Direction exécutive</h3>
+      <div class="grid grid--4" style="margin-top:16px">
         <div class="card reveal"><h3>Directeur exécutif</h3><p>Dirige l'association, met en œuvre le plan d'action et présente le rapport annuel.</p></div>
         <div class="card reveal"><h3>Directeur scientifique</h3><p>Pilote la stratégie scientifique, la recherche, les publications et l'éthique.</p></div>
-        <div class="card reveal"><h3>Directeur de formation</h3><p>Conçoit les plans de formation et le développement des compétences.</p></div>
+        <div class="card reveal"><h3>Directeur de formation et développement des compétences</h3><p>Conçoit les plans de formation et le développement des compétences.</p></div>
         <div class="card reveal"><h3>Directeur administratif et financier</h3><p>Garantit la conformité, le suivi des subventions et la gestion budgétaire.</p></div>
       </div>
-      <p class="reveal" style="margin-top:32px;color:var(--muted)">Président du Conseil d'administration : <strong style="color:var(--navy-deep)">Prof. Erick Mukala Mayoyo, PhD</strong></p>
+      <p class="reveal" style="margin-top:28px;color:var(--muted)">Chaque département scientifique est dirigé par un chef de département entouré de chercheurs, d'assistants de recherche et d'experts techniques. <a href="services.html#departements">Voir les départements</a></p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="cta reveal">
-        <div><h2>Découvrez notre expertise</h2><p>Axes d'activités, domaines d'intervention et départements scientifiques.</p></div>
-        <a class="btn btn--dark" href="services.html">Nos domaines d'expertise →</a>
+        <div><h2>Découvrez nos services</h2><p>Recherche, suivi et évaluation, données, synthèse de l'évidence, dialogue politique et gestion de projets.</p></div>
+        <a class="btn btn--dark" href="services.html">Nos services →</a>
       </div>
     </div>
   </section>

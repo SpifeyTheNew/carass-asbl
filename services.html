@@ -18,8 +18,22 @@
     <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <nav class="nav" aria-label="Navigation principale">
       <ul>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li class="has-sub"><a href="apropos.html">À propos</a>
+          <ul class="sub">
+            <li><a href="apropos.html#qui-sommes-nous">Qui sommes-nous</a></li>
+            <li><a href="apropos.html#missions-valeurs">Missions et valeurs</a></li>
+            <li><a href="apropos.html#gouvernance">Gouvernance</a></li>
+            <li><a href="apropos.html#equipe">Équipe</a></li>
+          </ul></li>
+        <li class="has-sub"><a href="services.html">Services</a>
+          <ul class="sub">
+            <li><a href="services.html#recherche">Recherche en santé publique</a></li>
+            <li><a href="services.html#suivi-evaluation">Suivi et évaluation</a></li>
+            <li><a href="services.html#donnees">Données</a></li>
+            <li><a href="services.html#synthese-evidence">Synthèse de l'évidence</a></li>
+            <li><a href="services.html#dialogue-politique">Dialogue politique</a></li>
+            <li><a href="services.html#gestion-projets">Gestion de projets</a></li>
+          </ul></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="actualites.html">Actualités</a></li>
         <li><a href="formations.html">Formations</a></li>
@@ -34,90 +48,124 @@
     <div class="container">
       <div class="crumbs"><a href="index.html">Accueil</a> / Services</div>
       <h1>Nos services</h1>
-      <p class="lead">Produire, promouvoir et valoriser la recherche, former et renforcer les capacités, et fournir un appui scientifique, technique et stratégique aux systèmes de santé.</p>
+      <p class="lead">Un appui scientifique, technique et stratégique aux ministères, programmes de santé, ONG et partenaires, pour des décisions fondées sur les données probantes.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Objectifs</span>
-        <h2>Nos objectifs spécifiques</h2>
-      </div>
-      <div class="grid grid--3">
-        <div class="card reveal"><div class="card__num">01</div><h3>Appui stratégique</h3><p>Appuyer les systèmes de santé aux niveaux local, régional et national dans la planification, la mise en œuvre et le suivi-évaluation.</p></div>
-        <div class="card reveal"><div class="card__num">02</div><h3>Capacités</h3><p>Renforcer les acteurs de santé par la formation initiale et continue, le mentorat et l'assistance technique.</p></div>
-        <div class="card reveal"><div class="card__num">03</div><h3>Recherche</h3><p>Mener la recherche épidémiologique, comportementale, interventionnelle, évaluative et opérationnelle.</p></div>
-        <div class="card reveal"><div class="card__num">04</div><h3>Inégalités de santé</h3><p>Produire et diffuser des savoirs sur les inégalités sociales et de santé pour mieux les réduire.</p></div>
-        <div class="card reveal"><div class="card__num">05</div><h3>Couverture santé universelle</h3><p>Renforcer la gouvernance et le financement de la santé et les soins de santé primaires.</p></div>
-        <div class="card reveal"><div class="card__num">06</div><h3>Connaissances &amp; innovation</h3><p>Promouvoir l'innovation, le partage des connaissances et l'usage des données de recherche.</p></div>
-      </div>
-    </div>
-  </section>
+  <nav class="subnav" aria-label="Sections de la page">
+    <div class="container"><ul>
+      <li><a href="#recherche">Recherche en santé publique</a></li>
+      <li><a href="#suivi-evaluation">Suivi et évaluation</a></li>
+      <li><a href="#donnees">Données</a></li>
+      <li><a href="#synthese-evidence">Synthèse de l'évidence</a></li>
+      <li><a href="#dialogue-politique">Dialogue politique</a></li>
+      <li><a href="#gestion-projets">Gestion de projets</a></li>
+    </ul></div>
+  </nav>
 
-  <section class="section section--alt" id="axes">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Activités</span>
-        <h2>Nos axes d'activités</h2>
-        <p class="lead">Cliquez sur un axe pour découvrir les activités menées.</p>
-      </div>
+  <section class="section anchor" id="recherche">
+    <div class="container split service">
       <div class="reveal">
-        <details class="acc" open><summary>Recherche et production de connaissances</summary><div class="acc__body"><ul>
-          <li>Études, enquêtes, analyses situationnelles et institutionnelles, évaluations et audits</li>
-          <li>Recherche opérationnelle en santé publique, sur les politiques et systèmes de santé et en sciences sociales</li>
-          <li>Analyse des politiques publiques de santé, du financement et de la gouvernance sanitaire</li>
-          <li>Rapports, articles scientifiques, notes de politique et documents de plaidoyer</li>
-        </ul></div></details>
-        <details class="acc"><summary>Renforcement des systèmes de santé et couverture santé universelle</summary><div class="acc__body"><ul>
-          <li>Appui au ministère de la Santé, à ses programmes, aux institutions publiques, ONG et partenaires</li>
-          <li>Planification, mise en œuvre, suivi et évaluation des politiques, programmes et projets</li>
-          <li>Accompagnement des réformes : accès, qualité, équité et efficience des services</li>
-          <li>Analyse et amélioration des mécanismes de financement de la santé</li>
-          <li>Programmes de promotion de la santé et de prévention des maladies</li>
-        </ul></div></details>
-        <details class="acc"><summary>Renforcement des capacités, formation et accompagnement</summary><div class="acc__body"><ul>
-          <li>Formations, ateliers, séminaires, colloques et conférences scientifiques</li>
-          <li>Codirection de travaux de licence, master et doctorat avec les universités</li>
-          <li>Accompagnement à la rédaction d'articles, mémoires et thèses</li>
-          <li>Modules en présentiel et à distance en santé publique et sciences sociales</li>
-          <li>Formations aux logiciels d'analyse de données et à l'IA dans la recherche</li>
-        </ul></div></details>
-        <details class="acc"><summary>Gestion des politiques, programmes et projets d'urgence et de développement</summary><div class="acc__body"><ul>
-          <li>Appui-conseil pour la gestion stratégique des politiques, programmes et projets</li>
-          <li>Planification opérationnelle, suivi des performances, budgets, délais et qualité</li>
-          <li>Audits institutionnels (vaccination, lutte contre les maladies, promotion de la santé)</li>
-          <li>Plateformes de concertation : vaccination, paludisme, maladies chroniques</li>
-        </ul></div></details>
-        <details class="acc"><summary>Analyse des inégalités sociales et de santé</summary><div class="acc__body"><ul>
-          <li>Étude des déterminants sociaux, économiques, environnementaux et culturels</li>
-          <li>Analyse de l'équité dans l'accès aux services de santé</li>
-          <li>Recommandations pour des politiques publiques justes et inclusives</li>
-        </ul></div></details>
-        <details class="acc"><summary>Plaidoyer et dialogue politique</summary><div class="acc__body"><ul>
-          <li>Plaidoyer pour des politiques de santé fondées sur des évidences</li>
-          <li>Droits des patients et participation communautaire</li>
-          <li>Cadres de concertation et de dialogue multi-acteurs</li>
-        </ul></div></details>
-        <details class="acc"><summary>Gestion des connaissances, innovation et partenariats</summary><div class="acc__body"><ul>
-          <li>Promotion des données, du numérique et des innovations en santé</li>
-          <li>Capitalisation et diffusion des bonnes pratiques</li>
-          <li>Partenariats scientifiques locaux, régionaux et internationaux, réseaux et consortiums</li>
-        </ul></div></details>
-        <details class="acc"><summary>Surveillance sanitaire et démographique</summary><div class="acc__body"><ul>
-          <li>Mise en place et gestion d'un observatoire de santé</li>
-          <li>Collecte, analyse et diffusion de données de base pour évaluer les interventions</li>
-        </ul></div></details>
-        <details class="acc"><summary>Valorisation et communication scientifique</summary><div class="acc__body"><ul>
-          <li>Publication de rapports, articles, notes de politique et documents techniques</li>
-          <li>Ateliers, conférences, colloques, journées et forums scientifiques</li>
-          <li>Revues, bulletins et promotion de la culture scientifique</li>
-        </ul></div></details>
+        <div class="service__num">01</div>
+        <h2>Recherche en santé publique</h2>
+        <p class="lead">Des recherches rigoureuses et multidisciplinaires pour comprendre et résoudre les problèmes de santé publique et des systèmes de santé africains.</p>
       </div>
+      <ul class="list-check reveal">
+        <li>Recherche épidémiologique, comportementale, interventionnelle et évaluative</li>
+        <li>Recherche opérationnelle : faisabilité, adéquation des ressources, performance des services, chaîne logistique</li>
+        <li>Recherche sur les politiques et les systèmes de santé</li>
+        <li>Analyse des inégalités sociales et de santé et de leurs déterminants</li>
+        <li>Recherche en sciences sociales appliquées à la santé</li>
+      </ul>
     </div>
   </section>
 
-  <section class="section" id="departements">
+  <section class="section section--alt anchor" id="suivi-evaluation">
+    <div class="container split service">
+      <div class="reveal">
+        <div class="service__num">02</div>
+        <h2>Suivi et évaluation</h2>
+        <p class="lead">Mesurer les résultats et l'impact des politiques, programmes et interventions pour apprendre, rendre compte et s'améliorer.</p>
+      </div>
+      <ul class="list-check reveal">
+        <li>Conception de plans et de cadres de suivi-évaluation</li>
+        <li>Études de base, évaluations à mi-parcours et finales</li>
+        <li>Évaluation de l'impact des politiques et interventions en santé et bien-être social</li>
+        <li>Audits institutionnels des programmes (vaccination, lutte contre les maladies, promotion de la santé)</li>
+        <li>Capitalisation des expériences, apprentissage et redevabilité</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section anchor" id="donnees">
+    <div class="container split service">
+      <div class="reveal">
+        <div class="service__num">03</div>
+        <h2>Données</h2>
+        <p class="lead">Collecter, gérer, analyser et valoriser les données de santé pour éclairer la prise de décision.</p>
+      </div>
+      <ul class="list-check reveal">
+        <li>Conception et conduite d'enquêtes, collecte de données</li>
+        <li>Gestion et analyse des données de santé, quantitatives et qualitatives</li>
+        <li>Surveillance sanitaire et démographique, observatoire de santé</li>
+        <li>Promotion de l'utilisation des données, du numérique et des innovations en santé</li>
+        <li>Formation aux logiciels d'analyse et à l'IA dans la recherche</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt anchor" id="synthese-evidence">
+    <div class="container split service">
+      <div class="reveal">
+        <div class="service__num">04</div>
+        <h2>Synthèse de l'évidence</h2>
+        <p class="lead">Rassembler et traduire les connaissances scientifiques en recommandations utiles aux décideurs.</p>
+      </div>
+      <ul class="list-check reveal">
+        <li>Production de données et d'évidences pour l'élaboration des politiques publiques</li>
+        <li>Revues de la littérature et synthèses des connaissances</li>
+        <li>Notes de politique, rapports et documents techniques</li>
+        <li>Recommandations fondées sur les données probantes pour des politiques justes et inclusives</li>
+        <li>Documentation et diffusion des leçons apprises et des bonnes pratiques</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section anchor" id="dialogue-politique">
+    <div class="container split service">
+      <div class="reveal">
+        <div class="service__num">05</div>
+        <h2>Dialogue politique</h2>
+        <p class="lead">Rapprocher chercheurs, décideurs et communautés autour de politiques de santé fondées sur les évidences.</p>
+      </div>
+      <ul class="list-check reveal">
+        <li>Plaidoyer pour des politiques de santé fondées sur des évidences</li>
+        <li>Promotion de l'équité, des droits humains, du genre et de la participation communautaire</li>
+        <li>Organisation de cadres de concertation et de dialogue multi-acteurs</li>
+        <li>Appui au plaidoyer pour les droits des patients</li>
+        <li>Communication pour le changement social et comportemental</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt anchor" id="gestion-projets">
+    <div class="container split service">
+      <div class="reveal">
+        <div class="service__num">06</div>
+        <h2>Gestion de projets</h2>
+        <p class="lead">Accompagner la gestion stratégique et opérationnelle des politiques, programmes et projets d'urgence et de développement.</p>
+      </div>
+      <ul class="list-check reveal">
+        <li>Appui-conseil aux ministères, programmes, institutions et ONG</li>
+        <li>Planification détaillée, suivi et contrôle des performances</li>
+        <li>Gestion des budgets, des délais, de la qualité et des ressources</li>
+        <li>Mise en place de plateformes de concertation (vaccination, paludisme, maladies chroniques)</li>
+        <li>Appui aux réformes vers la couverture santé universelle</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section anchor" id="departements">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow"><span class="dots"><i></i><i></i><i></i></span> Départements</span>
@@ -164,7 +212,7 @@
   <section class="section">
     <div class="container">
       <div class="cta reveal">
-        <div><h2>Un projet en tête ?</h2><p>Études, évaluations, formations ou appui technique : notre équipe vous accompagne.</p></div>
+        <div><h2>Un projet en tête ?</h2><p>Études, évaluations, analyses de données ou appui technique : notre équipe vous accompagne.</p></div>
         <a class="btn btn--dark" href="contact.html">Collaborons ensemble →</a>
       </div>
     </div>

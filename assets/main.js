@@ -16,6 +16,37 @@
     if (a.getAttribute('href') === page) a.setAttribute('aria-current', 'page');
   });
 
+  // Fermer le menu mobile après un clic sur un lien
+  if (nav) nav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      nav.classList.remove('is-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Onglets de page : surligne la section visible
+  var tabs = document.querySelectorAll('.subnav a');
+  if (tabs.length && 'IntersectionObserver' in window) {
+    var byId = {};
+    tabs.forEach(function (t) { byId[t.getAttribute('href').slice(1)] = t; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        tabs.forEach(function (t) { t.classList.remove('is-active'); });
+        var t = byId[e.target.id];
+        if (t) {
+          t.classList.add('is-active');
+          var ul = t.closest('ul');
+          if (ul) ul.scrollLeft = t.offsetLeft - 16;
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(byId).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) spy.observe(el);
+    });
+  }
+
   // Apparition au défilement
   var items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
