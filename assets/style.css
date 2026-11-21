@@ -502,7 +502,7 @@ details.acc .acc__body li { margin-bottom: 6px; }
   background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
   display: flex; flex-direction: column; transition: box-shadow .2s ease, transform .2s ease;
 }
-.tcard:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.tcard--clickable:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
 .tcard__photo {
   position: relative; aspect-ratio: 4 / 4.2; display: grid; place-items: center;
   background: linear-gradient(135deg, var(--navy) 0%, var(--sky) 100%); color: #fff;
@@ -532,7 +532,7 @@ details.acc .acc__body li { margin-bottom: 6px; }
 .tcard__link:focus-visible { outline: none; }
 .tcard__link:focus-visible::after { outline: 3px solid var(--sky); outline-offset: 2px; }
 .tcard:hover .tcard__link { color: var(--navy); }
-.tcard { cursor: pointer; }
+.tcard--clickable { cursor: pointer; }
 
 /* Fenêtre de profil */
 .pmodal { position: fixed; width: min(820px, calc(100vw - 32px)); }
