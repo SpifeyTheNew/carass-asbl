@@ -303,6 +303,36 @@ details.acc .acc__body li { margin-bottom: 6px; }
 .orgchart__box--2 { background: var(--navy); }
 .orgchart__box--3 { background: #0f6bb5; }
 .orgchart__box--4 { background: var(--sky); }
+/* Lignes latérales : Commission de contrôle (droite) et Conseil scientifique (gauche) */
+.orgchart__row {
+  --col-gap: 32px;
+  display: grid; grid-template-columns: 1fr minmax(0, 340px) 1fr; column-gap: var(--col-gap);
+  align-items: center;
+}
+.orgchart__row--side { min-height: 104px; }
+.orgchart__spine { position: relative; align-self: stretch; }
+.orgchart__spine::before { /* ligne verticale CA -> Direction */
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0; border-left: 2px solid var(--line-c);
+}
+.orgchart__spine--right::after { /* branche vers la droite */
+  content: ""; position: absolute; left: 50%; right: calc(-1 * var(--col-gap)); top: 50%; border-top: 2px solid var(--line-c);
+}
+.orgchart__row .orgchart__box { width: min(100%, 300px); margin: 0; }
+.orgchart__box--side { justify-self: start; }
+.orgchart__box--left { justify-self: end; }
+.orgchart__box--center { justify-self: center; width: min(100%, 340px) !important; }
+.orgchart__box--left::after { /* liaison Conseil scientifique -> Direction exécutive */
+  content: ""; position: absolute; top: 50%; left: 100%; width: var(--col-gap); border-top: 2px solid var(--line-c);
+}
+.orgchart__row--main { align-items: stretch; }
+.orgchart__row--main .orgchart__box { display: grid; place-items: center; }
+.orgchart__chain .orgchart__box:last-child { margin-bottom: 0; }
+@media (max-width: 640px) {
+  .orgchart__row { --col-gap: 12px; grid-template-columns: 1fr 1.25fr 1fr; }
+  .orgchart__row .orgchart__box { padding: 10px 8px; }
+  .orgchart__row .orgchart__box strong { font-size: .8rem; }
+  .orgchart__row--side { min-height: 84px; }
+}
 .orgchart__stem { width: 0; height: var(--drop); margin: 0 auto; border-left: 2px solid var(--line-c); }
 .orgchart__depts {
   list-style: none; margin: var(--drop) 0 0; padding: 0;
